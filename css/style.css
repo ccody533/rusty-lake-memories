@@ -1,0 +1,174 @@
+/* ===== Rusty Lake Global Styles ===== */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Noto+Serif+SC:wght@400;600;700&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --bg-dark:#4f252d;
+  --bg-panel:#53212c;
+  --bg-card:#141109;
+  --bg-card-hover:#1e1a12;
+  --brown:#3e2a14;
+  --brown-light:#5c3d1e;
+  --gold:#a6893c;
+  --gold-bright:#d4b44a;
+  --gold-dim:#ff3549;
+  --green:#1a2e1a;
+  --green-accent:#2d4a2d;
+  --text-primary:#d4c5a0;
+  --text-secondary:#a2f3dc;
+  --text-dim:#dfdf81;
+  --red-accent:#6b2020;
+  --blue-accent:#1e3a4a;
+  --nav-h:54px;
+}
+
+html{font-size:16px;scroll-behavior:smooth}
+body{
+  background:var(--bg-dark);color:var(--text-primary);
+  font-family:'Noto Serif SC','Georgia',serif;
+  min-height:100vh;overflow-x:hidden;
+  padding-top:var(--nav-h);
+}
+
+/* bg texture */
+body::before{
+  content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(166,137,60,.012) 2px,rgba(166,137,60,.012) 3px),
+    repeating-linear-gradient(90deg,transparent,transparent 3px,rgba(30,58,74,.015) 3px,rgba(30,58,74,.015) 4px),
+    radial-gradient(ellipse at 50% 0%,rgba(166,137,60,.06) 0%,transparent 70%);
+}
+
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--bg-dark)}
+::-webkit-scrollbar-thumb{background:var(--gold-dim);border-radius:3px}
+
+a{color:var(--gold);text-decoration:none;transition:color .3s}
+a:hover{color:var(--gold-bright)}
+
+/* ===== Nav ===== */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000; height: var(--nav-h);
+  /* 核心修改：上下浅、中间深的透明渐变 */
+  background: linear-gradient(
+    to bottom, 
+    rgba(200, 79, 85, 1.0) 0%,   /* 顶部：浅金色，透明度 0.7 */
+    rgba(255, 82, 88, 0.7) 25%,  
+	rgba(182, 63, 68, 0.7) 75%,  /* 中间：深金色，透明度 0.85（最深） */
+    rgba(146, 45, 49, 0.7) 100%  /* 底部：浅金色，透明度 0.7 */
+  );
+  /* 增强毛玻璃效果，让背后的模糊感更明显 */
+  backdrop-filter: blur(16px); 
+  -webkit-backdrop-filter: blur(16px); /* 兼容 Safari */
+  
+  border-bottom: 1px solid rgba(148, 50, 55, 1.0);
+  display: flex; align-items: center; justify-content: center; gap: .3rem;
+  padding: 0 1rem;
+  /* 可选：加一点底部阴影，让导航栏和页面内容的层次感更强 */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+.nav a{
+  font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:.08em;
+  color:var(--text-dim);padding:.5rem .9rem;border-radius:2px;
+  transition:all .3s;white-space:nowrap;
+  border:1px solid transparent;
+}
+.nav a:hover{color:var(--text-secondary);border-color:rgba(166,137,60,.1)}
+.nav a.active{
+  color:var(--gold-bright);
+  border-color:rgba(166,137,60,.2);
+  background:rgba(166,137,60,.06);
+}
+.nav .nav-logo{
+  font-size:.9rem;color:var(--gold-bright);font-weight:700;
+  margin-right:.8rem;letter-spacing:.15em;
+}
+
+/* ===== Section helpers ===== */
+.section{position:relative;z-index:1}
+.container{max-width:1100px;margin:0 auto;padding:0 1.2rem}
+.section-title{
+  font-family:'Cinzel',serif;font-size:1.3rem;color:var(--gold);
+  letter-spacing:.12em;text-align:center;padding:2.5rem 0 1.5rem;
+  display:flex;align-items:center;gap:.8rem;justify-content:center;
+}
+.section-title::before,.section-title::after{
+  content:'';width:60px;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(166,137,60,.3));
+}
+.section-title::after{
+  background:linear-gradient(90deg,rgba(166,137,60,.3),transparent);
+}
+
+/* ===== Card grid ===== */
+.card-grid{
+  display:grid;gap:1rem;
+  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+}
+
+/* ===== Buttons ===== */
+.btn{
+  font-family:'Noto Serif SC',serif;font-size:.8rem;
+  padding:.5rem 1.2rem;border-radius:2px;cursor:pointer;
+  transition:all .3s;border:1px solid var(--gold-dim);
+  background:rgba(166,137,60,.1);color:var(--gold);
+  letter-spacing:.05em;
+}
+.btn:hover{background:rgba(166,137,60,.2);transform:translateY(-1px)}
+.btn:active{transform:translateY(0)}
+.btn-primary{
+  background:linear-gradient(135deg,var(--gold-dim),var(--gold));
+  color:var(--bg-dark);border:none;font-weight:700;
+  text-shadow:0 1px 0 rgba(255,255,255,.15);
+}
+.btn-primary:hover{
+  box-shadow:0 4px 20px rgba(166,137,60,.3);
+  background:linear-gradient(135deg,var(--gold),var(--gold-bright));
+}
+.btn-sm{font-size:.7rem;padding:.35rem .8rem}
+
+/* ===== Toast ===== */
+.toast{
+  position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(80px);
+  background:var(--bg-panel);border:1px solid var(--gold-dim);
+  color:var(--gold);font-size:.8rem;padding:.6rem 1.5rem;
+  border-radius:3px;z-index:9999;opacity:0;transition:all .4s;
+  pointer-events:none;white-space:nowrap;
+}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ===== Particles canvas ===== */
+#particles{position:fixed;inset:0;z-index:0;pointer-events:none}
+
+/* ===== Responsive ===== */
+@media(max-width:640px){
+  :root{--nav-h:48px}
+  html{font-size:14px}
+  .nav{gap:.1rem;padding:0 .5rem}
+  .nav .nav-logo{font-size:.75rem;margin-right:.4rem}
+  .nav a{font-size:.65rem;padding:.4rem .5rem}
+  .card-grid{grid-template-columns:1fr}
+  .entry-cards{grid-template-columns:1fr}
+  .tip-list{grid-template-columns:1fr}
+  .tip-list li{padding:.6rem .7rem;gap:.7rem}
+  .quicknav-sidebar{display:none}
+}
+
+/* ===== 快捷导航 — 左侧收缩栏 ===== */
+.quicknav-sidebar{position:fixed;left:0;top:65%;z-index:15;transform:translateY(-50%);display:flex;align-items:center}
+.quicknav-sidebar-tab{writing-mode:vertical-rl;text-orientation:mixed;display:flex;align-items:center;gap:6px;padding:12px 8px;background:rgba(83,33,44,.92);border:1px solid rgba(166,137,60,.2);border-left:none;border-radius:0 6px 6px 0;cursor:pointer;color:#a6893c;font-size:.72rem;letter-spacing:.08em;transition:all .3s;backdrop-filter:blur(8px);box-shadow:2px 0 12px rgba(0,0,0,.3)}
+.quicknav-sidebar-tab:hover{background:rgba(83,33,44,1);border-color:rgba(166,137,60,.4);padding:12px 10px}
+.quicknav-tab-icon{font-size:.85rem;font-style:normal}
+.quicknav-tab-text{font-family:'Cinzel',serif}
+.quicknav-sidebar-panel{position:absolute;left:100%;top:50%;transform:translateY(-50%) translateX(-8px);width:240px;background:rgba(83,33,44,.96);border:1px solid rgba(166,137,60,.2);border-radius:0 8px 8px 0;box-shadow:4px 0 24px rgba(0,0,0,.4);backdrop-filter:blur(12px);opacity:0;pointer-events:none;transition:opacity .3s,transform .3s}
+.quicknav-sidebar:hover .quicknav-sidebar-panel{opacity:1;pointer-events:auto;transform:translateY(-50%) translateX(0)}
+.quicknav-panel-header{padding:12px 14px 10px;font-family:'Cinzel',serif;font-size:.82rem;color:#d4b44a;letter-spacing:.1em;border-bottom:1px solid rgba(166,137,60,.12)}
+.quicknav-link{display:flex;align-items:center;gap:10px;padding:10px 14px;text-decoration:none;border-bottom:1px solid rgba(166,137,60,.06);transition:background .25s}
+.quicknav-link:last-child{border-bottom:none}
+.quicknav-link:hover{background:rgba(166,137,60,.1)}
+.quicknav-icon{font-size:1.1rem;flex-shrink:0}
+.quicknav-info{display:flex;flex-direction:column;gap:2px;min-width:0}
+.quicknav-title{font-size:.8rem;color:#dcfffb;font-weight:600;transition:color .25s}
+.quicknav-link:hover .quicknav-title{color:#d4b44a}
+.quicknav-desc{font-size:.68rem;color:#ffff00;line-height:1.4}

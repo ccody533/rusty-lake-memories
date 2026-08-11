@@ -1,0 +1,235 @@
+
+  /* controls */
+  .controls{
+    display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:center;
+    padding:1rem 0 1.5rem;
+  }
+  .filter-btn{
+    background:var(--bg-panel);border:1px solid rgba(166,137,60,.15);
+    color:var(--text-dim);font-family:'Noto Serif SC',serif;font-size:.75rem;
+    padding:.4rem .9rem;border-radius:2px;cursor:pointer;transition:all .3s;
+  }
+  .filter-btn:hover{border-color:var(--gold-dim);color:var(--text-secondary)}
+  .filter-btn.active{background:rgba(166,137,60,.12);border-color:var(--gold);color:var(--gold-bright)}
+  .gacha-btn{
+    font-family:'Cinzel',serif;font-weight:700;font-size:1rem;
+    padding:.55rem 2.2rem;letter-spacing:.1em;
+    background:linear-gradient(135deg,var(--gold-dim),var(--gold),var(--gold-dim));
+    color:var(--bg-dark);border:none;border-radius:2px;cursor:pointer;
+    transition:all .4s;position:relative;overflow:hidden;
+    text-shadow:0 1px 0 rgba(255,255,255,.2);
+  }
+  .gacha-btn::before{
+    content:'';position:absolute;inset:-2px;
+    background:linear-gradient(45deg,transparent 30%,rgba(255,255,255,.15) 50%,transparent 70%);
+    transform:translateX(-100%);transition:transform .6s;
+  }
+  .gacha-btn:hover::before{transform:translateX(100%)}
+  .gacha-btn:hover{transform:scale(1.05);box-shadow:0 0 25px rgba(166,137,60,.4)}
+  .gacha-btn:active{transform:scale(.97)}
+  .wishlist-toggle{
+    font-family:'Noto Serif SC',serif;font-size:.75rem;
+    background:transparent;border:1px solid rgba(107,32,32,.4);
+    color:#b85555;padding:.4rem .9rem;border-radius:2px;cursor:pointer;
+    transition:all .3s;
+  }
+  .wishlist-toggle:hover,.wishlist-toggle.active{
+    background:rgba(107,32,32,.15);border-color:#b85555;color:#d07070;
+  }
+
+  /* card stage */
+  .card-stage{
+    display:flex;justify-content:center;align-items:center;
+    min-height:440px;margin-bottom:1.5rem;perspective:1200px;
+  }
+  .card-container{
+    width:320px;height:460px;position:relative;
+    transform-style:preserve-3d;transition:transform .8s cubic-bezier(.4,0,.2,1);
+    cursor:default;
+  }
+  .card-container.flipped{transform:rotateY(180deg)}
+
+  .card-face{
+    position:absolute;inset:0;backface-visibility:hidden;
+    border-radius:8px;overflow:hidden;
+    box-shadow:0 8px 40px rgba(0,0,0,.6),0 0 0 1px rgba(166,137,60,.15);
+  }
+  .card-front{
+    background:var(--bg-card);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+  }
+  .card-front .pattern{
+    position:absolute;inset:0;opacity:.06;
+    background:
+      repeating-conic-gradient(var(--gold-dim) 0% 25%,transparent 0% 50%) 0 0 / 30px 30px,
+      repeating-linear-gradient(45deg,transparent,transparent 10px,rgba(166,137,60,.03) 10px,rgba(166,137,60,.03) 11px);
+  }
+  .card-front .logo-area{position:relative;z-index:1;text-align:center}
+  .card-front .logo-area .icon{
+    font-size:3.5rem;margin-bottom:1rem;
+    filter:drop-shadow(0 0 15px rgba(166,137,60,.4));
+  }
+  .card-front .logo-area h2{
+    font-family:'Cinzel',serif;font-size:1.4rem;color:var(--gold-bright);
+    letter-spacing:.15em;text-shadow:0 0 20px rgba(166,137,60,.3);
+  }
+  .card-front .logo-area p{font-size:.75rem;color:var(--text-dim);letter-spacing:.3em;margin-top:.3rem}
+  .card-front .corner{position:absolute;width:30px;height:30px;border-color:var(--gold-dim);border-style:solid;border-width:0}
+  .card-front .corner.tl{top:12px;left:12px;border-top-width:1px;border-left-width:1px}
+  .card-front .corner.tr{top:12px;right:12px;border-top-width:1px;border-right-width:1px}
+  .card-front .corner.bl{bottom:12px;left:12px;border-bottom-width:1px;border-left-width:1px}
+  .card-front .corner.br{bottom:12px;right:12px;border-bottom-width:1px;border-right-width:1px}
+
+  .card-back{
+    transform:rotateY(180deg);background:var(--bg-card);
+    display:flex;flex-direction:column;
+  }
+  .card-back .card-cover{
+    height:170px;position:relative;overflow:hidden;
+    background:linear-gradient(135deg,var(--green),var(--brown));
+  }
+  .card-back .card-cover img{
+    width:100%;height:100%;object-fit:cover;
+  }
+  .card-back .card-cover .cover-overlay{
+    position:absolute;inset:0;
+    background:linear-gradient(180deg,transparent 30%,rgba(0,0,0,.7));
+    z-index:1;
+  }
+  .card-back .card-cover .cover-content{
+    position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+    z-index:2;text-align:center;
+    display:flex;flex-direction:column;align-items:center;
+  }
+  .card-back .card-cover .cover-content .ci{
+    font-size:2.5rem;filter:drop-shadow(0 2px 10px rgba(0,0,0,.7));
+    margin-bottom:.2rem;
+  }
+  .card-back .card-cover .cover-content span{
+    font-size:.6rem;color:var(--text-secondary);letter-spacing:.12em;
+    text-shadow:0 1px 4px rgba(0,0,0,.8);
+  }
+  .card-back .card-cover .type-badge{
+    position:absolute;top:10px;right:10px;
+    font-size:.55rem;padding:.15rem .45rem;border-radius:1px;
+    background:rgba(0,0,0,.7);border:1px solid var(--gold-dim);
+    color:var(--gold);letter-spacing:.08em;
+  }
+  .card-back .card-body{
+    flex:1;padding:1rem 1.2rem;display:flex;flex-direction:column;gap:.4rem;
+  }
+  .card-back .card-body h3{
+    font-family:'Cinzel',serif;font-size:1.05rem;color:var(--gold-bright);
+    text-shadow:0 0 10px rgba(166,137,60,.2);
+  }
+  .card-back .card-body .meta{display:flex;gap:.6rem;font-size:.68rem;color:var(--text-dim)}
+  .card-back .card-body .desc{
+    font-size:.75rem;color:var(--text-secondary);line-height:1.6;flex:1;overflow:hidden;
+  }
+  .card-back .card-body .reason{
+    font-size:.7rem;color:var(--gold-dim);font-style:italic;
+    border-left:2px solid var(--gold-dim);padding-left:.5rem;line-height:1.5;
+  }
+  .card-back .card-body .platforms{
+    font-size:.6rem;color:var(--text-dim);
+    border-top:1px solid rgba(166,137,60,.08);padding-top:.3rem;
+  }
+  .card-back .card-actions{
+    padding:.7rem 1.2rem;display:flex;gap:.5rem;
+    border-top:1px solid rgba(166,137,60,.08);
+  }
+  .btn-collect{
+    flex:1;font-family:'Noto Serif SC',serif;font-size:.72rem;
+    padding:.4rem;border-radius:2px;cursor:pointer;transition:all .3s;
+    background:rgba(166,137,60,.08);border:1px solid var(--gold-dim);color:var(--gold);
+  }
+  .btn-collect:hover{background:rgba(166,137,60,.18)}
+  .btn-collect.collected{background:rgba(166,137,60,.22);color:var(--gold-bright)}
+  .btn-redraw{
+    font-family:'Noto Serif SC',serif;font-size:.72rem;
+    padding:.4rem .8rem;border-radius:2px;cursor:pointer;transition:all .3s;
+    background:transparent;border:1px solid rgba(166,137,60,.1);color:var(--text-dim);
+  }
+  .btn-redraw:hover{border-color:var(--gold-dim);color:var(--text-secondary)}
+
+  /* idle hint */
+  .idle-hint{text-align:center;color:var(--text-dim);font-size:.72rem;letter-spacing:.1em;margin-bottom:2rem}
+
+  /* stats */
+  .stats{display:flex;justify-content:center;gap:2rem;margin-bottom:1rem;font-size:.72rem;color:var(--text-dim)}
+  .stats .sv{color:var(--gold);font-family:'Cinzel',serif}
+
+  /* wishlist */
+  .wishlist-section{
+    display:none;margin-top:2rem;
+    border-top:1px solid rgba(166,137,60,.08);padding-top:1.5rem;
+  }
+  .wishlist-section.show{display:block}
+  .wishlist-section h2{
+    font-family:'Cinzel',serif;font-size:1rem;color:var(--gold);
+    letter-spacing:.08em;margin-bottom:1rem;text-align:center;
+  }
+  .wishlist-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem}
+  .wish-card{
+    background:var(--bg-panel);border:1px solid rgba(166,137,60,.08);
+    padding:1rem;border-radius:3px;position:relative;transition:all .3s;
+  }
+  .wish-card:hover{border-color:rgba(166,137,60,.2)}
+  .wish-card h4{font-size:.85rem;color:var(--gold-bright);margin-bottom:.3rem}
+  .wish-card .wm{font-size:.62rem;color:var(--text-dim);margin-bottom:.3rem}
+  .wish-card .wd{font-size:.7rem;color:var(--text-secondary);line-height:1.5}
+  .wish-card .wr{
+    position:absolute;top:.5rem;right:.5rem;
+    background:none;border:none;color:var(--text-dim);
+    cursor:pointer;font-size:.9rem;transition:color .3s;
+  }
+  .wish-card .wr:hover{color:#b85555}
+  .empty-wish{text-align:center;color:var(--text-dim);font-size:.78rem;padding:2rem}
+
+  @keyframes drawIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+  .card-container.draw-in{animation:drawIn .5s ease-out}
+
+  /* Page Hero */
+  .page-hero{
+    position:relative;height:360px;min-height:280px;
+    display:flex;align-items:center;justify-content:center;
+    overflow:hidden;margin-bottom:1rem;
+  }
+  .page-hero .hero-bg{
+    position:absolute;inset:0;
+    background:url("../images/rusty lake.png") center 30%/cover no-repeat;
+  }
+  .page-hero .hero-bg::after{
+    content:'';position:absolute;inset:0;
+    background:linear-gradient(to bottom,rgba(79,36,45,0) 0%,rgba(79,36,45,.15) 35%,rgba(79,36,45,.7) 60%,rgba(79,36,45,.95) 100%);
+  }
+  .page-hero .hero-grid{
+    position:absolute;inset:0;
+    background:
+      repeating-linear-gradient(0deg,transparent,transparent 40px,rgba(166,137,60,.03) 40px,rgba(166,137,60,.03) 41px),
+      repeating-linear-gradient(90deg,transparent,transparent 40px,rgba(166,137,60,.03) 40px,rgba(166,137,60,.03) 41px);
+    animation:gridPulse 8s ease-in-out infinite;
+  }
+  @keyframes gridPulse{0%,100%{opacity:.4}50%{opacity:.8}}
+  .page-hero-inner{
+    position:relative;z-index:2;
+    display:flex;flex-direction:column;align-items:center;
+    justify-content:space-between;
+    width:100%;height:100%;
+    padding:3rem 1.5rem 2rem;
+  }
+  .page-hero-title{
+    font-family:'Cinzel',serif;font-size:1.8rem;color:var(--gold-bright);
+    letter-spacing:.15em;text-shadow:0 2px 15px rgba(0,0,0,.6);
+  }
+  .page-hero-slogan{
+    font-family:'Noto Serif SC','Songti SC',serif;
+    font-size:.95rem;color:rgba(255,226,241,.8);
+    letter-spacing:.4em;text-shadow:0 1px 4px rgba(167,102,102,1);
+    font-weight:300;margin-top:.5rem;
+  }
+  .page-hero-icon{
+    font-size:2rem;
+    filter:drop-shadow(0 2px 8px rgba(0,0,0,.5));
+  }
+

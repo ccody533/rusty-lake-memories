@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>锈湖系列 · 人物图鉴</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/characters_style.css">
+
+</head>
+<body>
+<!-- 快捷导航 — 左侧收缩栏 -->
+<div class="quicknav-sidebar" id="quicknavSidebar">
+  <div class="quicknav-sidebar-tab">
+    <span class="quicknav-tab-icon">⚡</span>
+    <span class="quicknav-tab-text">导航</span>
+  </div>
+  <div class="quicknav-sidebar-panel">
+    <div class="quicknav-panel-header">快捷导航</div>
+    <a href="characters.html" class="quicknav-link">
+      <span class="quicknav-icon">👤</span>
+      <div class="quicknav-info">
+        <span class="quicknav-title">人物图鉴</span>
+        <span class="quicknav-desc">快来了解主要人物吧</span>
+      </div>
+    </a>
+    <a href="series.html" class="quicknav-link">
+      <span class="quicknav-icon">🎮</span>
+      <div class="quicknav-info">
+        <span class="quicknav-title">全系列成就</span>
+        <span class="quicknav-desc">一览锈湖全系列作品与成就</span>
+      </div>
+    </a>
+    <a href="gacha.html" class="quicknav-link">
+      <span class="quicknav-icon">🎲</span>
+      <div class="quicknav-info">
+        <span class="quicknav-title">抽卡安利</span>
+        <span class="quicknav-desc">试试手气，抽一张锈湖卡牌</span>
+      </div>
+    </a>
+    <a href="guide.html" class="quicknav-link">
+      <span class="quicknav-icon">📖</span>
+      <div class="quicknav-info">
+        <span class="quicknav-title">入坑指南</span>
+        <span class="quicknav-desc">新手必看的游玩顺序推荐</span>
+      </div>
+    </a>
+    <a href="myachieve.html" class="quicknav-link">
+      <span class="quicknav-icon">🏆</span>
+      <div class="quicknav-info">
+        <span class="quicknav-title">我的成就</span>
+        <span class="quicknav-desc">记录你的锈湖冒险旅程</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+<nav class="nav">
+  <span class="nav-logo"> RUSTY LAKE</span>
+  <a href="index.html">首页</a>
+  <a href="characters.html" class="active">人物图鉴</a>
+  <a href="series.html">全系列成就</a>
+  <a href="gacha.html">抽卡安利</a>
+  <a href="guide.html">入坑指南</a>
+  <a href="myachieve.html">我的成就</a>
+</nav>
+
+<canvas id="particles"></canvas>
+
+<!-- ===== 横向轮播：锈湖主要人物 ===== -->
+<div class="section carousel-section">
+
+  <div class="carousel-viewport">
+    <div class="carousel-track" id="carouselTrack">
+
+      <div class="carousel-card" data-game="owl" style="background:#1a0e14">
+        <div class="carousel-card-bg" style="background-image:url(images/owl.png)"></div>
+        <div class="diagonal-edge"></div>
+        <div class="carousel-card-overlay"></div>
+        <div class="carousel-card-title">猫头鹰先生</div>
+        <div class="carousel-card-num">01</div>
+        <div class="carousel-card-info">
+          <h3>Mr. Owl</h3>
+          <p>锈湖世界的最高守护者，拥有操控记忆和时间的强大力量，掌管锈湖旅馆。</p>
+          <div class="card-tags"><span class="card-tag">守护者</span><span class="card-tag">记忆提取</span><span class="card-tag">旅馆主人</span></div>
+        </div>
+      </div>
+
+      <div class="carousel-card" data-game="crow" style="background:#0e1218">
+        <div class="carousel-card-bg" style="background-image:url(images/crow.png)"></div>
+        <div class="diagonal-edge"></div>
+        <div class="carousel-card-overlay"></div>
+        <div class="carousel-card-title">乌鸦先生</div>
+        <div class="carousel-card-num">02</div>
+        <div class="carousel-card-info">
+          <h3>Mr. Crow</h3>
+          <p>前身为Aldous Vanderboom，通过炼金术获得永生化身为乌鸦，穿梭于各故事线之间。</p>
+          <div class="card-tags"><span class="card-tag">炼金术</span><span class="card-tag">永生</span><span class="card-tag">穿梭者</span></div>
+        </div>
+      </div>
+
+      <div class="carousel-card" data-game="laura" style="background:#14100a">
+        <div class="carousel-card-bg" style="background-image:url(images/Laura.png)"></div>
+        <div class="diagonal-edge"></div>
+        <div class="carousel-card-overlay"></div>
+        <div class="carousel-card-title">劳拉</div>
+        <div class="carousel-card-num">03</div>
+        <div class="carousel-card-info">
+          <h3>Laura Vanderboom</h3>
+          <p>锈湖宇宙中最关键的人物，Vanderboom家族后裔，多条故事线的交汇点。</p>
+          <div class="card-tags"><span class="card-tag">关键人物</span><span class="card-tag">记忆之钥</span><span class="card-tag">家族后裔</span></div>
+        </div>
+      </div>
+
+      <div class="carousel-card" data-game="dale" style="background:#0a0e14">
+        <div class="carousel-card-bg" style="background-image:url(images/Dale.png)"></div>
+        <div class="diagonal-edge"></div>
+        <div class="carousel-card-overlay"></div>
+        <div class="carousel-card-title">戴尔侦探</div>
+        <div class="carousel-card-num">04</div>
+        <div class="carousel-card-info">
+          <h3>Dale Vandermeer</h3>
+          <p>侦探，Vandermeer家族后裔，调查案件时被卷入锈湖世界，命运与Laura紧密相连。</p>
+          <div class="card-tags"><span class="card-tag">侦探</span><span class="card-tag">调查者</span><span class="card-tag">Case 23</span></div>
+        </div>
+      </div>
+
+      <div class="carousel-card" data-game="harvey" style="background:#1a1208">
+        <div class="carousel-card-bg" style="background-image:url(images/harvey.png)"></div>
+        <div class="diagonal-edge"></div>
+        <div class="carousel-card-overlay"></div>
+        <div class="carousel-card-title">哈维</div>
+        <div class="carousel-card-num">05</div>
+        <div class="carousel-card-info">
+          <h3>Harvey</h3>
+          <p>鹦鹉，Mr. Owl最忠实的伙伴，曾属于Laura，能感知普通人无法察觉的事物。</p>
+          <div class="card-tags"><span class="card-tag">鹦鹉</span><span class="card-tag">信使</span><span class="card-tag">旅馆员工</span></div>
+        </div>
+      </div>
+
+      <div class="carousel-card" data-game="william" style="background:#120e08">
+        <div class="carousel-card-bg" style="background-image:url(images/William.png)"></div>
+        <div class="diagonal-edge"></div>
+        <div class="carousel-card-overlay"></div>
+        <div class="carousel-card-title">威廉</div>
+        <div class="carousel-card-num">06</div>
+        <div class="carousel-card-info">
+          <h3>William Vanderboom</h3>
+          <p>Vanderboom家族始祖，19世纪炼金术士，对锈湖秘密有着浓厚兴趣。</p>
+          <div class="card-tags"><span class="card-tag">家族始祖</span><span class="card-tag">炼金术士</span><span class="card-tag">Roots</span></div>
+        </div>
+      </div>
+
+      <div class="carousel-card" data-game="bob" style="background:#080c10">
+        <div class="carousel-card-bg" style="background-image:url(images/bob.png)"></div>
+        <div class="diagonal-edge"></div>
+        <div class="carousel-card-overlay"></div>
+        <div class="carousel-card-title">鲍勃</div>
+        <div class="carousel-card-num">07</div>
+        <div class="carousel-card-info">
+          <h3>Bob</h3>
+          <p>锈湖旅馆客人，与劳拉是前任关系，其死亡案件是Dale侦探调查的起点。</p>
+          <div class="card-tags"><span class="card-tag">旅馆客人</span><span class="card-tag">前任</span><span class="card-tag">Case 23</span></div>
+        </div>
+      </div>
+
+      <div class="carousel-card" data-game="rose" style="background:#14120a">
+        <div class="carousel-card-bg" style="background-image:url(images/rose.png)"></div>
+        <div class="diagonal-edge"></div>
+        <div class="carousel-card-overlay"></div>
+        <div class="carousel-card-title">罗斯</div>
+        <div class="carousel-card-num">08</div>
+        <div class="carousel-card-info">
+          <h3>Rose Vanderboom</h3>
+          <p>Vanderboom家族后裔，在家族衰落时期承担延续血脉和探寻真相的重任。</p>
+          <div class="card-tags"><span class="card-tag">家族后裔</span><span class="card-tag">命运承担者</span><span class="card-tag">Roots</span></div>
+        </div>
+      </div>
+
+      <div class="carousel-card" data-game="albert" style="background:#0e0a12">
+        <div class="carousel-card-bg" style="background-image:url(images/Albert.png)"></div>
+        <div class="diagonal-edge"></div>
+        <div class="carousel-card-overlay"></div>
+        <div class="carousel-card-title">阿尔伯特</div>
+        <div class="carousel-card-num">09</div>
+        <div class="carousel-card-info">
+          <h3>Albert Vanderboom</h3>
+          <p>Vanderboom家族后裔，James与Mary之子，性格孤僻，人生轨迹与家族命运深度交织。</p>
+          <div class="card-tags"><span class="card-tag">Vanderboom家族</span><span class="card-tag">家族后裔</span><span class="card-tag">Roots</span></div>
+        </div>
+      </div>
+
+      <div class="carousel-card" data-game="frank" style="background:#0c0a10">
+        <div class="carousel-card-bg" style="background-image:url(images/Frank.png)"></div>
+        <div class="diagonal-edge"></div>
+        <div class="carousel-card-overlay"></div>
+        <div class="carousel-card-title">弗兰克</div>
+        <div class="carousel-card-num">10</div>
+        <div class="carousel-card-info">
+          <h3>Frank Vanderboom</h3>
+          <p>Vanderboom家族中命运最悲惨的成员，被囚禁在地下度过漫长岁月。</p>
+          <div class="card-tags"><span class="card-tag">被囚禁者</span><span class="card-tag">家族悲剧</span><span class="card-tag">Roots</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="carousel-arrow prev" id="carouselPrev" style="display:none"></div>
+    <div class="carousel-arrow next" id="carouselNext" style="display:none"></div>
+  </div>
+
+  <div class="carousel-dots" id="carouselDots" style="display:none"></div>
+</div>
+
+<!-- 轮播详情弹窗 -->
+<div class="carousel-detail" id="carouselDetail">
+  <button class="carousel-detail-close" id="carouselDetailClose">&times;</button>
+  <div class="carousel-detail-inner">
+    <div class="carousel-detail-img" id="carouselDetailImg"></div>
+    <div class="carousel-detail-body">
+      <h2 id="carouselDetailName"></h2>
+      <div class="detail-sub" id="carouselDetailSub"></div>
+      <div id="carouselDetailDesc"></div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  RUSTY LAKE FAN SITE · NOT AFFILIATED WITH RUSTY LAKE B.V.
+</footer>
+
+
+<script src="js/characters.js"></script>
+
+</body>
+</html>

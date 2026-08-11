@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>锈湖系列 · 我的成就</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/myachieve_style.css">
+
+</head>
+<body>
+<!-- 快捷导航 — 左侧收缩栏 -->
+<div class="quicknav-sidebar" id="quicknavSidebar">
+  <div class="quicknav-sidebar-tab">
+    <span class="quicknav-tab-icon">⚡</span>
+    <span class="quicknav-tab-text">导航</span>
+  </div>
+  <div class="quicknav-sidebar-panel">
+    <div class="quicknav-panel-header">快捷导航</div>
+    <a href="characters.html" class="quicknav-link">
+      <span class="quicknav-icon">👤</span>
+      <div class="quicknav-info">
+        <span class="quicknav-title">人物图鉴</span>
+        <span class="quicknav-desc">快来了解主要人物吧</span>
+      </div>
+    </a>
+    <a href="series.html" class="quicknav-link">
+      <span class="quicknav-icon">🎮</span>
+      <div class="quicknav-info">
+        <span class="quicknav-title">全系列成就</span>
+        <span class="quicknav-desc">一览锈湖全系列作品与成就</span>
+      </div>
+    </a>
+    <a href="gacha.html" class="quicknav-link">
+      <span class="quicknav-icon">🎲</span>
+      <div class="quicknav-info">
+        <span class="quicknav-title">抽卡安利</span>
+        <span class="quicknav-desc">试试手气，抽一张锈湖卡牌</span>
+      </div>
+    </a>
+    <a href="guide.html" class="quicknav-link">
+      <span class="quicknav-icon">📖</span>
+      <div class="quicknav-info">
+        <span class="quicknav-title">入坑指南</span>
+        <span class="quicknav-desc">新手必看的游玩顺序推荐</span>
+      </div>
+    </a>
+    <a href="myachieve.html" class="quicknav-link">
+      <span class="quicknav-icon">🏆</span>
+      <div class="quicknav-info">
+        <span class="quicknav-title">我的成就</span>
+        <span class="quicknav-desc">记录你的锈湖冒险旅程</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+<nav class="nav">
+  <span class="nav-logo"> RUSTY LAKE</span>
+  <a href="index.html">首页</a>
+  <a href="characters.html">人物图鉴</a>
+  <a href="series.html">全系列成就</a>
+  <a href="gacha.html">抽卡安利</a>
+  <a href="guide.html">入坑指南</a>
+  <a href="myachieve.html" class="active">我的成就</a>
+</nav>
+
+<canvas id="particles"></canvas>
+
+<div class="section">
+
+<section class="page-hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="page-hero-inner">
+    <div>
+      <p class="page-hero-title">我的成就</p>
+      <p class="page-hero-slogan">记录你在锈湖宇宙的探索足迹</p>
+    </div>
+
+  </div>
+</section>
+
+  <div class="container">
+
+    <div class="progress-hero">
+      <div class="progress-ring-wrap">
+        <svg class="progress-ring" width="160" height="160" viewBox="0 0 160 160">
+          <circle class="ring-bg" cx="80" cy="80" r="70"/>
+          <circle class="ring-fill" id="ringFill" cx="80" cy="80" r="70"
+            stroke-dasharray="439.82" stroke-dashoffset="439.82"/>
+        </svg>
+        <div class="progress-center">
+          <span class="pct" id="pctText">0%</span>
+          <span class="pct-label">完成度</span>
+        </div>
+      </div>
+      <div class="progress-summary">
+        已解锁 <span class="sv" id="unlockNum">0</span> / <span id="totalNum">0</span> 部作品
+      </div>
+    </div>
+
+    <div class="ach-controls">
+      <button class="btn btn-sm" id="btnUnlockAll">一键全部解锁</button>
+      <button class="btn btn-sm" id="btnLockAll">全部重置</button>
+    </div>
+
+    <div id="badgeContainer"></div>
+
+    <div class="stats-footer" id="statsFooter"></div>
+  </div>
+</div>
+
+<!-- Detail Panel -->
+<div class="detail-panel" id="detailPanel">
+  <div class="detail-card">
+    <div class="detail-cover" id="detailCover">
+      <img id="detailImg" src="" alt="">
+      <div class="detail-cover-overlay"></div>
+      <span class="detail-cover-icon" id="detailIcon"></span>
+      <button class="detail-close" id="detailClose">✕</button>
+    </div>
+    <div class="detail-body">
+      <h3 id="detailTitle"></h3>
+      <div class="dm" id="detailMeta"></div>
+      <div class="dd" id="detailDesc"></div>
+      <div class="df" id="detailFeature"></div>
+      <div class="dp" id="detailPlatforms"></div>
+    </div>
+    <div class="detail-actions">
+      <button class="btn" id="detailToggle">解锁此成就</button>
+    </div>
+  </div>
+</div>
+
+<script src="data.js"></script>
+
+<script src="js/myachieve.js"></script>
+
+</body>
+</html>

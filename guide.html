@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>锈湖系列 · 入坑指南</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/guide_style.css">
+
+</head>
+<body>
+<!-- 快捷导航 — 左侧收缩栏 -->
+<div class="quicknav-sidebar" id="quicknavSidebar">
+  <div class="quicknav-sidebar-tab">
+    <span class="quicknav-tab-icon">⚡</span>
+    <span class="quicknav-tab-text">导航</span>
+  </div>
+  <div class="quicknav-sidebar-panel">
+    <div class="quicknav-panel-header">快捷导航</div>
+    <a href="characters.html" class="quicknav-link">
+      <span class="quicknav-icon">👤</span>
+      <div class="quicknav-info">
+        <span class="quicknav-title">人物图鉴</span>
+        <span class="quicknav-desc">快来了解主要人物吧</span>
+      </div>
+    </a>
+    <a href="series.html" class="quicknav-link">
+      <span class="quicknav-icon">🎮</span>
+      <div class="quicknav-info">
+        <span class="quicknav-title">全系列成就</span>
+        <span class="quicknav-desc">一览锈湖全系列作品与成就</span>
+      </div>
+    </a>
+    <a href="gacha.html" class="quicknav-link">
+      <span class="quicknav-icon">🎲</span>
+      <div class="quicknav-info">
+        <span class="quicknav-title">抽卡安利</span>
+        <span class="quicknav-desc">试试手气，抽一张锈湖卡牌</span>
+      </div>
+    </a>
+    <a href="guide.html" class="quicknav-link">
+      <span class="quicknav-icon">📖</span>
+      <div class="quicknav-info">
+        <span class="quicknav-title">入坑指南</span>
+        <span class="quicknav-desc">新手必看的游玩顺序推荐</span>
+      </div>
+    </a>
+    <a href="myachieve.html" class="quicknav-link">
+      <span class="quicknav-icon">🏆</span>
+      <div class="quicknav-info">
+        <span class="quicknav-title">我的成就</span>
+        <span class="quicknav-desc">记录你的锈湖冒险旅程</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+<nav class="nav">
+  <span class="nav-logo"> RUSTY LAKE</span>
+  <a href="index.html">首页</a>
+  <a href="characters.html">人物图鉴</a>
+  <a href="series.html">全系列成就</a>
+  <a href="gacha.html">抽卡安利</a>
+  <a href="guide.html" class="active">入坑指南</a>
+  <a href="myachieve.html">我的成就</a>
+</nav>
+
+<canvas id="particles"></canvas>
+
+<div class="section">
+
+<section class="page-hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="page-hero-inner">
+    <div>
+      <p class="page-hero-title">入坑指南</p>
+      <p class="page-hero-slogan">从零开始，走进锈湖的深处</p>
+    </div>
+  </div>
+</section>
+
+  <div class="container">
+
+    <!-- 推荐游玩顺序 -->
+    <div class="guide-section">
+      <h2>🗺️ 推荐游玩顺序</h2>
+      <div class="guide-card">
+        <h3>📌 新手推荐路线（由浅入深）</h3>
+        <p>锈湖系列作品之间有微妙的剧情关联，但并不强制按顺序游玩。以下是根据难度和叙事复杂度推荐的路线：</p>
+        <div class="route-grid">
+          <div class="route-step">
+            <div class="rs-num">STEP 01</div>
+            <h4>方块逃脱：四季</h4>
+            <p>最能代表锈湖风格的入门作品，时间线交叉解谜的经典。</p>
+            <span class="rs-tag">免费 · 入门首选</span>
+          </div>
+          <div class="route-step">
+            <div class="rs-num">STEP 02</div>
+            <h4>方块逃脱：案件23</h4>
+            <p>侦探视角代入感强，叙事张力拉满，是系列悬疑感的巅峰。</p>
+            <span class="rs-tag">免费 · 悬疑推理</span>
+          </div>
+          <div class="route-step">
+            <div class="rs-num">STEP 03</div>
+            <h4>方块逃脱：洞穴</h4>
+            <p>深入锈湖地下，揭示核心秘密。与主线关联最紧密的外传。</p>
+            <span class="rs-tag">免费 · 剧情关键</span>
+          </div>
+          <div class="route-step">
+            <div class="rs-num">STEP 04</div>
+            <h4>锈湖：旅馆</h4>
+            <p>付费系列的起点。六位动物客人的诡异晚餐，世界观奠基之作。</p>
+            <span class="rs-tag">付费 · 系列开山</span>
+          </div>
+          <div class="route-step">
+            <div class="rs-num">STEP 05</div>
+            <h4>锈湖：根源</h4>
+            <p>Vanderboom 家族75年的命运轮回，叙事最宏大的一部。</p>
+            <span class="rs-tag">付费 · 史诗叙事</span>
+          </div>
+          <div class="route-step">
+            <div class="rs-num">STEP 06</div>
+            <h4>锈湖：天堂岛</h4>
+            <p>十灾主题设计大胆，视觉风格最为华丽的系列作品。</p>
+            <span class="rs-tag">付费 · 十灾主题</span>
+          </div>
+          <div class="route-step">
+            <div class="rs-num">STEP 07</div>
+            <h4>白门</h4>
+            <p>分屏叙事手法惊艳，风格最独特的一部。日程表与记忆碎片的交织。</p>
+            <span class="rs-tag">付费 · 分屏叙事</span>
+          </div>
+          <div class="route-step">
+            <div class="rs-num">STEP 08</div>
+            <h4>地铁繁花</h4>
+            <p>系列最新主线。地铁站与人生节点的隐喻，画面巅峰。</p>
+            <span class="rs-tag">付费 · 最新力作</span>
+          </div>
+        </div>
+        <p class="highlight" style="font-size:.75rem;margin-top:.8rem">✦ 补充：《内在昔日》是双人合作游戏，建议找到搭档后再体验；《轮回的房间》作为前传可以在通关主线后回溯。</p>
+      </div>
+    </div>
+
+    <!-- 基础解谜技巧 -->
+    <div class="guide-section">
+      <h2>🔧 基础解谜技巧</h2>
+      <div class="tips-grid">
+        <div class="tip-card">
+          <h4>🔍 点击一切</h4>
+          <p>锈湖的交互逻辑是「能点的都要点」。看似装饰的物件可能是关键线索，不要放过任何角落。</p>
+        </div>
+        <div class="tip-card">
+          <h4>🧩 注意颜色和形状</h4>
+          <p>很多谜题的线索隐藏在颜色、形状、数字的对应关系中。看到有颜色区分的物品，多半是解谜关键。</p>
+        </div>
+        <div class="tip-card">
+          <h4>🔄 倒推思维</h4>
+          <p>当你知道需要什么但不知道怎么获取时，试着从结果倒推。有时候完成一个操作会解锁另一区域的线索。</p>
+        </div>
+        <div class="tip-card">
+          <h4>📝 记录线索</h4>
+          <p>遇到数字、符号、图案等线索时，建议截图或笔记记录。后续谜题经常需要用到前面场景的信息。</p>
+        </div>
+        <div class="tip-card">
+          <h4>🎵 关注音效</h4>
+          <p>锈湖的音效设计不只是氛围，有时也是线索。特定的声音序列可能是密码，环境音的变化提示你方向正确。</p>
+        </div>
+        <div class="tip-card">
+          <h4>📖 读文本</h4>
+          <p>游戏中的信件、日记、报纸等文本内容承载大量剧情信息和隐性线索，不要跳过。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 卡关怎么办 -->
+    <div class="guide-section">
+      <h2>🆘 卡关怎么办</h2>
+      <div class="guide-card">
+        <h3>💡 看攻略不丢人</h3>
+        <p>锈湖的谜题设计有时非常隐晦，有些甚至需要跨场景联想。卡关超过15分钟建议看攻略，这不影响体验，反而能帮你发现遗漏的细节。</p>
+        <ul>
+          <li><span class="li-icon">✦</span><span><strong>先看文字攻略</strong>，不要直接看视频——文字攻略可以只看当前卡的那一步，保留其余部分的探索乐趣。</span></li>
+          <li><span class="li-icon">✦</span><span><strong>推荐资源</strong>：锈湖 Wiki（Rusty Lake Wiki）有全系列的详细图文攻略，社区讨论也很活跃。</span></li>
+          <li><span class="li-icon">✦</span><span><strong>注意版本差异</strong>：部分作品的移动版和PC版谜题略有不同，看攻略时注意对应平台。</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 剧情脉络梳理 -->
+    <div class="guide-section">
+      <h2>📜 系列剧情脉络</h2>
+      <div class="guide-card">
+        <p class="warn" style="font-size:.75rem;margin-bottom:1rem">⚠️ 以下包含轻度剧透，建议至少游玩2-3部作品后再阅读</p>
+
+        <div class="timeline">
+          <div class="tl-item active">
+            <h4>锈湖的起源</h4>
+            <div class="tl-date">远古时代</div>
+            <p>锈湖从远古时期就存在，湖底沉睡着某种超自然的力量。这股力量能够保存和操纵记忆，是一切事件的根源。《轮回的房间》暗示了灵魂在锈湖力量下的轮回机制。</p>
+          </div>
+          <div class="tl-item">
+            <h4>Vanderboom 家族</h4>
+            <div class="tl-date">1860 — 1935</div>
+            <p>《锈湖：根源》讲述了 Vanderboom 家族三代人的故事。James 和 Mary 的结合开启了家族的命运，而家族成员的生死、爱恨、实验都与锈湖的力量纠缠不清。这棵家族树的每一个分支都通向悲剧。</p>
+          </div>
+          <div class="tl-item">
+            <h4>Eilander 家族与天堂岛</h4>
+            <div class="tl-date">1796 — 1971</div>
+            <p>《锈湖：天堂岛》中，Eilander 家族世代居住在天堂岛。母亲 Caroline 的牺牲、Jakob 的回归、十灾的诅咒——这个家族的悲剧与锈湖的黑暗力量密切相关。</p>
+          </div>
+          <div class="tl-item">
+            <h4>锈湖旅馆</h4>
+            <div class="tl-date">1893 — 1896</div>
+            <p>《锈湖：旅馆》由 Mr. Owl 经营，六位动物客人受邀前来。表面上是奢华的晚餐，实际上是记忆提取的仪式。旅馆是锈湖力量运作的核心场所。</p>
+          </div>
+          <div class="tl-item">
+            <h4>Dale 的调查</h4>
+            <div class="tl-date">1971 — 1972</div>
+            <p>侦探 Dale Vandermeer 在《案件23》中调查一起凶杀案，逐步发现案件与锈湖的关联。他的调查让他一步步深入锈湖的核心秘密。</p>
+          </div>
+          <div class="tl-item">
+            <h4>Laura 的一生</h4>
+            <div class="tl-date">1979 — 2015</div>
+            <p>《地铁繁花》以 Laura Vanderboom 的人生为线索，每一站对应她生命中的一个节点。她的童年、成长、爱情与悲剧，串联起整个锈湖宇宙的时间线。</p>
+          </div>
+          <div class="tl-item">
+            <h4>Robert 的记忆</h4>
+            <div class="tl-date">2015</div>
+            <p>《白门》中 Robert Hill 在精神卫生中心醒来，他的记忆被提取、打散。在日程表的秩序与梦境的混乱之间，他试图找回真实的自己。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 核心角色 -->
+    <div class="guide-section">
+      <h2>🦌 核心角色</h2>
+      <div class="char-grid">
+        <div class="char-card">
+          <h4>🦉 Mr. Owl</h4>
+          <div class="cc-role">锈湖守护者</div>
+          <p>锈湖旅馆的经营者，也是锈湖力量的守护者。他的真实身份和目的贯穿整个系列，是理解锈湖宇宙的关键。</p>
+        </div>
+        <div class="char-card">
+          <h4>🐦 Mr. Crow</h4>
+          <div class="cc-role">穿梭者</div>
+          <p>乌鸦先生在多部作品中出现，有时是引导者，有时是谜题的一部分。他与 Mr. Owl 的关系是系列的核心谜团之一。</p>
+        </div>
+        <div class="char-card">
+          <h4>🦉 Harvey</h4>
+          <div class="cc-role">鹦鹉 / 信使</div>
+          <p>Harvey 是锈湖旅馆中的鹦鹉，也是系列的重要角色。它在多部作品中出现，有时作为信使，有时作为谜题的关键。</p>
+        </div>
+        <div class="char-card">
+          <h4>🧓 Laura Vanderboom</h4>
+          <div class="cc-role">命运的中心</div>
+          <p>Laura 是 Vanderboom 家族的后人，也是《地铁繁花》的主角。她的命运串联起锈湖宇宙的多个时间线。</p>
+        </div>
+        <div class="char-card">
+          <h4>🔍 Dale Vandermeer</h4>
+          <div class="cc-role">侦探</div>
+          <p>侦探 Dale 在《案件23》中被卷入锈湖的漩涡。他的调查揭示了锈湖与现实世界的联系。</p>
+        </div>
+        <div class="char-card">
+          <h4>🚪 Robert Hill</h4>
+          <div class="cc-role">记忆碎片</div>
+          <p>《白门》的主角 Robert 在精神卫生中心试图找回失去的记忆。他的故事是锈湖记忆提取机制的最直观展现。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 平台信息 -->
+    <div class="guide-section">
+      <h2>🖥️ 平台与获取</h2>
+      <div class="guide-card">
+        <h3>📱 各平台获取方式</h3>
+        <ul>
+          <li><span class="li-icon">🎮</span><span><strong>PC（Steam）</strong>——大部分作品都有 Steam 版本，经常打折。Cube Escape 系列在 Steam 上有合集版本。</span></li>
+          <li><span class="li-icon">🍎</span><span><strong>iOS（App Store）</strong>——所有作品都有 iOS 版本，适合碎片时间游玩。部分作品有 HD 版本。</span></li>
+          <li><span class="li-icon">🤖</span><span><strong>Android（Google Play）</strong>——与 iOS 同步上架，部分作品有免费版本。</span></li>
+          <li><span class="li-icon">🕹️</span><span><strong>Nintendo Switch</strong>——部分作品（如《内在昔日》）有 Switch 版本，适合掌机游玩。</span></li>
+        </ul>
+        <p style="margin-top:.8rem;font-size:.75rem;color:var(--text-dim)">✦ Cube Escape 系列（方块逃脱）在所有平台均免费，是零成本入门的最佳选择。</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="data.js"></script>
+
+<script src="js/guide.js"></script>
+
+</body>
+</html>

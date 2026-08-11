@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>锈湖系列 · 全系列成就</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/series_style.css">
+
+</head>
+<body>
+<!-- 快捷导航 — 左侧收缩栏 -->
+<div class="quicknav-sidebar" id="quicknavSidebar">
+  <div class="quicknav-sidebar-tab">
+    <span class="quicknav-tab-icon">⚡</span>
+    <span class="quicknav-tab-text">导航</span>
+  </div>
+  <div class="quicknav-sidebar-panel">
+    <div class="quicknav-panel-header">快捷导航</div>
+    <a href="characters.html" class="quicknav-link">
+      <span class="quicknav-icon">👤</span>
+      <div class="quicknav-info">
+        <span class="quicknav-title">人物图鉴</span>
+        <span class="quicknav-desc">快来了解主要人物吧</span>
+      </div>
+    </a>
+    <a href="series.html" class="quicknav-link">
+      <span class="quicknav-icon">🎮</span>
+      <div class="quicknav-info">
+        <span class="quicknav-title">全系列成就</span>
+        <span class="quicknav-desc">一览锈湖全系列作品与成就</span>
+      </div>
+    </a>
+    <a href="gacha.html" class="quicknav-link">
+      <span class="quicknav-icon">🎲</span>
+      <div class="quicknav-info">
+        <span class="quicknav-title">抽卡安利</span>
+        <span class="quicknav-desc">试试手气，抽一张锈湖卡牌</span>
+      </div>
+    </a>
+    <a href="guide.html" class="quicknav-link">
+      <span class="quicknav-icon">📖</span>
+      <div class="quicknav-info">
+        <span class="quicknav-title">入坑指南</span>
+        <span class="quicknav-desc">新手必看的游玩顺序推荐</span>
+      </div>
+    </a>
+    <a href="myachieve.html" class="quicknav-link">
+      <span class="quicknav-icon">🏆</span>
+      <div class="quicknav-info">
+        <span class="quicknav-title">我的成就</span>
+        <span class="quicknav-desc">记录你的锈湖冒险旅程</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+<nav class="nav">
+  <span class="nav-logo"> RUSTY LAKE</span>
+  <a href="index.html">首页</a>
+  <a href="characters.html">人物图鉴</a>
+  <a href="series.html" class="active">全系列成就</a>
+  <a href="gacha.html">抽卡安利</a>
+  <a href="guide.html">入坑指南</a>
+  <a href="myachieve.html">我的成就</a>
+</nav>
+
+<canvas id="particles"></canvas>
+
+<div class="section">
+
+<section class="page-hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="page-hero-inner">
+    <div>
+      <p class="page-hero-title">全系列成就</p>
+      <p class="page-hero-slogan">探索锈湖宇宙的每一块拼图</p>
+    </div>
+  </div>
+</section>
+
+  <div class="container">
+
+    <div class="progress-wrap">
+      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+      <div class="progress-text">已解锁 <span class="sv" id="unlockCount">0</span> / <span id="totalCount">0</span> 部作品</div>
+    </div>
+
+    <div class="top-controls">
+      <button class="btn btn-sm" id="btnUnlockAll">一键解锁全部</button>
+      <button class="btn btn-sm" id="btnLockAll">全部重置</button>
+    </div>
+
+    <div class="stats-bar">
+      <div>主线作品 <span class="sv" id="mainCount">0</span> 部</div>
+      <div>外传系列 <span class="sv" id="subCount">0</span> 部</div>
+    </div>
+
+    <div id="worksContainer"></div>
+
+  </div>
+</div>
+
+<script src="data.js"></script>
+
+<script src="js/series.js"></script>
+
+</body>
+</html>
