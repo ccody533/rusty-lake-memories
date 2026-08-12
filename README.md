@@ -6,6 +6,14 @@
 
 本项目是一个**同人创作展示站**，以锈湖系列游戏的世界观为基础，整合了角色资料、系列作品信息、互动玩法与视觉化关系图谱，希望能为同样喜爱锈湖的玩家提供一个可看、可玩、可探索的中文资料角落。
 
+### 为什么做这个
+
+其实很早之前就做了这个小作品——纯粹出于个人爱好，**锈湖太好玩了**。
+从《Cube Escape: Seasons》入坑后便一发不可收拾，每一部都反复通关，被那种黑色童话式的叙事、精细的解谜设计和暗藏的角色命运纠葛深深吸引。
+做这个站的初心很简单：希望更多人能接触到、并爱上这个系列，于是把自己整理的角色档案、作品编年、手绘角色关系图，以及那阵子着迷的 3D 记忆立方体和抽卡小游戏，一股脑塞了进来。
+
+这阵子恰好赶上锈湖**新作即将发布**的消息，翻了翻旧文件夹，才想起原来以前做过这样一个完整的小作品，便重新整理并发布出来——也算给这份喜欢留下一个可以被看见的角落。
+
 ### 功能特性
 
 - **首页 `index.html`**：站点入口，包含 3D 记忆立方体、视频轮播等视觉展示
@@ -135,6 +143,14 @@ rusty-lake-memories/
 ## About
 
 This is a **fan-made showcase site** built on the lore of the Rusty Lake series. It integrates character profiles, series work info, interactive features, and a visualized relationship graph, aiming to provide a readable, playable, and explorable corner in Chinese for fellow Rusty Lake fans.
+
+### Motivation
+
+I built this little project a long time ago — purely out of personal fondness, because **Rusty Lake is just too good**.
+It all started with *Cube Escape: Seasons*, and from there I got completely hooked. I replayed every title over and over, drawn in by the dark fairy-tale storytelling, the meticulous puzzle design, and the quietly tragic threads of fate woven between the characters.
+The idea was simple: I hoped more people would discover and fall in love with this series. So I packed in everything I'd gathered — character files, a series chronology, a hand-drawn relationship graph, plus the 3D memory cube and gacha mini-game I was obsessed with back then.
+
+Recently I caught wind that a **new Rusty Lake title is on the way**. Digging through old folders, I was reminded that I'd actually finished this whole little site years ago. So I dusted it off, polished it up, and published it — a small, visible corner for a fandom that still feels so dear.
 
 ### Features
 
