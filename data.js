@@ -70,10 +70,10 @@ const WORKS = [
     date:'2026年8月', type:'主线', category:'主线作品',
     cover:'', icon:'', img: WORKS_DEFAULT_IMG+ 'Servant of the Lake.jpg',
     desc:'开启你的新工作，成为神秘的Vanderboom宅邸的仆人吧。在Servant of the Lake中解开谜题，侍奉家族，并揭开他们阴暗的炼金术秘密。',
-    feature:'',
-    reason:'',
+    feature:'以仆人视角潜入 Vanderboom 宅邸日常，侍奉流程与暗藏的炼金术谜题交织；宅邸深处的秘密随日常职责一点点浮现。',
+    reason:'系列首次以"仆人"身份切入 Vanderboom 家族，填补了家族宅邸日常的视角空白，是连接前作故事的重要拼图。',
     platforms:'PC / iOS / Android',
-    lore:''
+    lore:'Vanderboom 宅邸的仆人，每日操持起居、照料家族成员，却在不经意间触碰到了这个家族最隐秘的炼金术传承。'
   },
     // 外传 / Cube Escape 系列
   {
@@ -81,10 +81,10 @@ const WORKS = [
     date:'2018年9月', type:'外传', category:'外传逃离方块系列',
     cover:'', icon:'', img: WORKS_DEFAULT_IMG+ '侦探.png',
     desc:'当臭名昭著的侦探戴尔·范德米尔在一个阴森的房间里醒来，却对过去毫无记忆时，他很快发现自己卷入了一场由老对手策划的奇异游戏，必须解开越来越难的谜题，逃出房间并恢复记忆。',
-    feature:'',
-    reason:'',
+    feature:'电影级分镜与解谜深度融合，章节式结构如同一部悬疑短片；多结局设计与隐藏线索让重复游玩仍有新发现。',
+    reason:'系列中视听表现最出色的一部外传，叙事张力与谜题设计并重，是 Dale 角色线的关键篇章。',
     platforms:'PC / iOS / Android',
-    lore:''
+    lore:'Dale 在记忆与现实的夹缝中醒来，对手正是锈湖的老朋友——Mr. Deer。每一次逃脱都可能是新一轮循环的开始。'
   },
   {
     id:'lake', name:'方块逃脱：湖泊', nameEn:'Cube Escape: The Lake',
