@@ -1,4 +1,4 @@
-# Rusty Lake 锈湖粉丝站 · Memories
+# Rusty Lake · Memories
 
 > 一个为锈湖（Rusty Lake / Cube Escape）系列打造的中文同人粉丝站，集合角色档案、作品编年、抽卡体验、视频轮播与角色关系图等交互内容。
 
@@ -9,8 +9,8 @@
 ### 为什么做这个
 
 其实很早之前就做了这个小作品——纯粹出于个人爱好，**锈湖太好玩了**。
-从《Cube Escape: Seasons》入坑后便一发不可收拾，每一部都反复通关，被那种黑色童话式的叙事、精细的解谜设计和暗藏的角色命运纠葛深深吸引。
-做这个站的初心很简单：希望更多人能接触到、并爱上这个系列，于是把自己整理的角色档案、作品编年、手绘角色关系图，以及那阵子着迷的 3D 记忆立方体和抽卡小游戏，一股脑塞了进来。
+从《天堂岛》入坑后便一发不可收拾，每一部都反复通关，被那种黑色童话式的叙事、精细的解谜设计和暗藏的角色命运纠葛深深吸引。
+做这个站的初心很简单：希望更多人能接触到、并爱上这个系列，于是把自己整理的角色档案、作品编年、手绘角色关系图，以及抽卡选择玩今日游戏，一股脑塞了进来。
 
 这阵子恰好赶上锈湖**新作即将发布**的消息，翻了翻旧文件夹，才想起原来以前做过这样一个完整的小作品，便重新整理并发布出来——也算给这份喜欢留下一个可以被看见的角落。
 
@@ -33,14 +33,6 @@
 人工筛选出最贴合预期的版本作为基底，再手动迭代调整与整合。
 
 > 记录这个对比过程并非"不专业"——这是一次关于「相同提示词下不同 AI 模型初版质量」的真实探索。
-
-参与对比的工具包括（按首字母排序）：
-- 豆包
-- DeepSeek
-- Cursor
-- 千问（Qwen）
-- miMo
-- Trae
 
 最终主开发与整合在 **Trae** 中完成。
 
@@ -147,8 +139,8 @@ This is a **fan-made showcase site** built on the lore of the Rusty Lake series.
 ### Motivation
 
 I built this little project a long time ago — purely out of personal fondness, because **Rusty Lake is just too good**.
-It all started with *Cube Escape: Seasons*, and from there I got completely hooked. I replayed every title over and over, drawn in by the dark fairy-tale storytelling, the meticulous puzzle design, and the quietly tragic threads of fate woven between the characters.
-The idea was simple: I hoped more people would discover and fall in love with this series. So I packed in everything I'd gathered — character files, a series chronology, a hand-drawn relationship graph, plus the 3D memory cube and gacha mini-game I was obsessed with back then.
+It all started with *Paradise Island*, and from there I got completely hooked. I replayed every title over and over, drawn in by the dark fairy-tale storytelling, the meticulous puzzle design, and the quietly tragic threads of fate woven between the characters.
+The idea was simple: I hoped more people would discover and fall in love with this series. So I packed in everything I'd gathered — character files, a series chronology, a hand-drawn relationship graph, and a gacha-style "play today's game" feature.
 
 Recently I caught wind that a **new Rusty Lake title is on the way**. Digging through old folders, I was reminded that I'd actually finished this whole little site years ago. So I dusted it off, polished it up, and published it — a small, visible corner for a fandom that still feels so dear.
 
@@ -170,14 +162,6 @@ During development, **multiple AI coding models were used to generate the initia
 keeping the prompt identical and without enabling any Skill, the same set of requirements was fed to each tool to produce a first draft, then the version closest to expectations was selected as the base and manually iterated.
 
 > Recording this comparison is not "unprofessional" — it is a genuine exploration of "the initial-draft quality of different AI models under the same prompt."
-
-Tools compared (alphabetical):
-- Cursor
-- DeepSeek
-- Doubao (豆包)
-- miMo
-- Qwen (千问)
-- Trae
 
 Final development and integration were done in **Trae**.
 
